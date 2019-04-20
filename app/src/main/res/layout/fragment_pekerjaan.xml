@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="16dp"
+    android:background="#d1d1d1"
+    >
+
+    <ImageView
+        android:id="@+id/cari"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:srcCompat="@drawable/ic_searchlogo"
+        android:tint="#dfdfdf"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="16dp"
+        />
+
+    <EditText
+        android:id="@+id/cari_pekerjaan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="  Cari Pekerjaan"
+        android:textSize="20sp"
+        android:singleLine="true"
+        android:inputType="text"
+        android:layout_marginTop="20dp"
+        android:ems="8"
+        android:layout_toRightOf="@id/cari"
+        />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_below="@id/cari_pekerjaan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="16dp"
+        android:text="Kategori"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="16dp">
+        <Button
+            android:layout_width="90dp"
+            android:layout_height="30dp"
+            android:background="@drawable/roundedbordergreen"
+            android:text="Bubut"
+            android:textColor="#ffffff"
+            android:layout_marginTop="8dp"
+            />
+
+        <Button
+            android:layout_width="90dp"
+            android:layout_height="30dp"
+            android:background="@drawable/roundedbordergreen"
+            android:text="Mekanik"
+            android:layout_marginLeft="8dp"
+            android:textColor="#ffffff"
+            android:layout_marginTop="8dp"/>
+
+        <Button
+            android:layout_width="90dp"
+            android:layout_height="30dp"
+            android:background="@drawable/roundedbordergreen"
+            android:text="Pengolahan"
+            android:layout_marginLeft="8dp"
+            android:textColor="#ffffff"
+            android:layout_marginTop="8dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_below="@id/kategori"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="16dp"
+        android:text="Anjuran Pekerjaan"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="148dp"
+        android:layout_marginTop="200dp">
+
+        <TextView
+            android:id="@+id/namakomunitas1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="Perkumpulan Olah Hasil Alam"
+            android:textColor="#ffffff"
+            android:textSize="24sp" />
+
+
+        <View
+            android:id="@+id/garis1"
+            style="@style/Divider"
+            android:layout_below="@id/namakomunitas1"
+            android:layout_marginLeft="15dp" />
+
+
+        <TextView
+            android:id="@+id/jmlhkomunitas1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/garis1"
+            android:paddingLeft="16dp"
+            android:paddingTop="8dp"
+            android:text="21 / 30 Orang"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/location1"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@id/jmlhkomunitas1"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="18dp"
+            android:tint="#ffffff"
+            app:srcCompat="@drawable/ic_locationlogo" />
+
+        <TextView
+            android:id="@+id/lokasikomunitas1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/jmlhkomunitas1"
+            android:layout_marginTop="18dp"
+            android:layout_toRightOf="@id/location1"
+            android:text="Jl Binjai KM.13"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/tulisanlihat"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="107dp"
+            android:background="@android:color/transparent"
+            android:text="Lihat Selengkapnya"
+            android:textColor="#ffffff" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="-32dp"
+            android:layout_marginTop="107dp"
+            android:layout_toRightOf="@id/tulisanlihat"
+            android:tint="#ffff"
+            app:srcCompat="@drawable/ic_arrowlogo" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

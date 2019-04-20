@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="170dp"
+        android:src="@drawable/cardproyekpipa"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Proyek Pengolahan Hasil Alam"
+            android:textColor="#ffffff"
+            android:textSize="18dp"/>
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="2dp"
+            android:layout_below="@id/buatakun"
+            android:background="#ffff" />
+
+        <TextView
+            android:id="@+id/tulisanproyekpipa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CV Manao Sumatera"
+            android:textColor="#ffff"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/lokasipt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            app:srcCompat="@drawable/ic_locationlogo"
+            android:tint="#ffff"/>
+
+        <TextView
+            android:id="@+id/alamatpt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="-24dp"
+            android:text="Jalan Binjai KM.13"
+            android:textColor="#ffff"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/jmlhpekerja"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="-40dp"
+            app:srcCompat="@drawable/workerlogo"
+            android:tint="#ffff"/>
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="240dp"
+            android:layout_marginTop="-25dp"
+            android:text="200 - 300 Orang"
+            android:textColor="#ffff"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/ic_profilelogo"
+            android:tint="#ffff"/>
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="240dp"
+            android:layout_marginTop="-25dp"
+            android:text="1,8 Juta / Orang"
+            android:textColor="#ffff"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/bataswaktu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:text="Deskripsi"
+            android:textColor="#34ABA1"
+            android:textSize="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_marginTop="8dp"
+            android:text="Perusahaan ini bergerak dalam bidang pengolahan hasil kekayaan alam"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Galeri"
+            android:textColor="#34ABA1"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/galericompany"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Penanggung Jawab"
+            android:textColor="#34ABA1"
+            android:textSize="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_profilelogo"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Diwantara Goh"
+                android:textColor="#000000"
+                android:textSize="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="48dp"
+                android:text="+6281212345678"
+                android:textColor="#dfdfdf"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_unggah"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="bottom|center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/roundedbuttonblue"
+            android:text="KerjaIn"
+            android:textSize="18dp"
+            android:textColor="#003B60" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

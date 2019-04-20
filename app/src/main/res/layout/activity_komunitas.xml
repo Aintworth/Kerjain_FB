@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".Komunitas">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/fotokomunitas1"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/mekanik" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/namakomunitas1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="Title"
+                android:textColor="#ffffff"
+                android:textSize="24sp" />
+
+            <view
+                android:id="@+id/garis1"
+                android:layout_width="85dp"
+                android:layout_height="3dp"
+                android:layout_below="@id/namakomunitas1"
+                android:layout_marginLeft="16dp"
+                android:backgroundTint="#ffffff" />
+
+            <TextView
+                android:id="@+id/jmlhkomunitas1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/garis1"
+                android:paddingLeft="16dp"
+                android:paddingTop="8dp"
+                android:text="21 / 30 Orang"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+
+
+                <ImageView
+                    android:id="@+id/location1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    app:srcCompat="@drawable/ic_locationlogo"
+                    android:layout_below="@id/jmlhkomunitas1"
+                    android:tint="#ffffff"
+                    />
+
+                <TextView
+                    android:id="@+id/lokasikomunitas1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/location1"
+                    android:layout_below="@id/jmlhkomunitas1"
+                    android:text="Kampung Gergas, Langkat"
+                    android:textColor="#ffffff"
+                    android:textSize="14sp" />
+
+        </RelativeLayout>
+
+
+</RelativeLayout>

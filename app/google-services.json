@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "326713222450",
+    "firebase_url": "https://kerjain-97710.firebaseio.com",
+    "project_id": "kerjain-97710",
+    "storage_bucket": "kerjain-97710.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:326713222450:android:a10e69877c6dca89",
+        "android_client_info": {
+          "package_name": "com.example.kerjain"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "326713222450-de53lb6pngisq50ojogii4vgqvk698dm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kerjain",
+            "certificate_hash": "2b852e6093f537b9d3a22b6d74cb16949a23a5c7"
+          }
+        },
+        {
+          "client_id": "326713222450-ca6e9da1lkal9f24gdg45gj1njq2uh7f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIWPJt_H0U8F768OqMQYNg3_IBCqNdCPQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "326713222450-ca6e9da1lkal9f24gdg45gj1njq2uh7f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,111 @@
+<resources>
+    <string name="app_name">KerjaIn</string>
+    <string name="insert_password">Kata Sandi</string>
+    <string-array name="kategori_job">
+        <item>Makanan</item>
+        <item>Industri</item>
+        <item>Hiburan</item>
+        <item>Musik</item>
+        <item>Fashion</item>
+    </string-array>
+
+    <string-array name="provinsi">
+        <item>Aceh</item>
+        <item>Sumatera Utara</item>
+        <item>Sumatera Barat</item>
+        <item>Riau</item>
+        <item>Jambi</item>
+        <item>Bengkulu</item>
+        <item>Bali</item>
+        <item>Banten</item>
+        <item>Daerah Istimewa Yogyakarta</item>
+        <item>DKI Jakarta</item>
+        <item>Gorontalo</item>
+        <item>Jambi</item>
+        <item>Jawa Barat</item>
+        <item>Jawa Tengah</item>
+        <item>Jawa Timur</item>
+        <item>Kalimantan Barat</item>
+        <item>Kalimantan Selatan</item>
+        <item>Kalimantan Tenah</item>
+        <item>Kalimantan Timur</item>
+        <item>Kalimantan Utara</item>
+        <item>Kepulauan Bangka Belitung</item>
+        <item>Kepulauan Riau</item>
+        <item>Lampung</item>
+        <item>Maluku Utara</item>
+        <item>Maluku</item>
+        <item>Nusa Tenggara Barat</item>
+        <item>Nusa Tenggara Timur</item>
+        <item>Papua</item>
+        <item>Papua Barat</item>
+        <item>Sulawesi Barat</item>
+        <item>Sulawesi Selatan</item>
+        <item>Sulawesi Tengah</item>
+        <item>Sulawesi Tenggara</item>
+        <item>Sulawesi Utara</item>
+        <item>Sumatera Selatan</item>
+    </string-array>
+
+    <string-array name="kabupaten">
+        <item>Nias</item>
+        <item>Mandailing Natal</item>
+        <item>Tapanuli Selatan</item>
+        <item>Tapanuli Tengah</item>
+        <item>Tapanuli Utara</item>
+        <item>Toba Samosir</item>
+        <item>Labuhan Batu</item>
+        <item>Asahan</item>
+        <item>Simalungun</item>
+        <item>Dairi</item>
+        <item>Karo</item>
+        <item>Deli Serdang</item>
+        <item>Langkat</item>
+        <item>Nias Selatan</item>
+        <item>Humbang Hasundutan</item>
+        <item>Pak-pak</item>
+        <item>Bharat</item>
+        <item>Samosir</item>
+        <item>Serdang Begadai</item>
+        <item>Batu Bara</item>
+        <item>Padang Lawas Utara</item>
+        <item>Padang Lawas</item>
+        <item>Labuhan Batu Selatan</item>
+        <item>Labuhan Batu Utara</item>
+        <item>Nias Utara</item>
+        <item>Nias Barat</item>
+        <item>Kota Sibolga</item>
+        <item>Kota Tanjung Balai</item>
+        <item>Kota Pematang Siantar</item>
+        <item>Kota Tebing Tinggi</item>
+        <item>Kota Medan</item>
+        <item>Kota Binjai</item>
+        <item>Kota Padang Sidempuan</item>
+        <item>Kota Gunung Sitoli</item>
+    </string-array>
+
+    <string-array name="kecamatan">
+        <item>Medan Tuntungan</item>
+        <item>Medan Johor</item>
+        <item>Medan Amplas</item>
+        <item>Medan Denai</item>
+        <item>Medan Area</item>
+        <item>Medan Kota</item>
+        <item>Medan Maimun</item>
+        <item>Medan Polonia</item>
+        <item>Medan Baru</item>
+        <item>Medan Selayang</item>
+        <item>Medan Sunggal</item>
+        <item>Medan Helvetia</item>
+        <item>Medan Petisah</item>
+        <item>Medan Barat</item>
+        <item>Medan Timur</item>
+        <item>Medan Perjuangan</item>
+        <item>Medan Tembung</item>
+        <item>Medan Deli</item>
+        <item>Medan Labuhan</item>
+        <item>Medan Marelan</item>
+        <item>Medan Belawan</item>
+    </string-array>
+
+</resources>

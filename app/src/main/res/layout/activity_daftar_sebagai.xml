@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/regist"
+    tools:context=".DaftarSebagai">
+
+    <ImageView
+        android:id="@+id/tulisan"
+        android:layout_width="230dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/tulisankerjain"/>
+
+    <TextView
+        android:id="@+id/tulisan2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tulisan"
+        android:layout_marginTop="32dp"
+        android:layout_centerHorizontal="true"
+        android:text="Daftar Sebagai"
+        android:textColor="#ffffff"
+        android:textSize="20dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="380dp">
+
+        <ImageButton
+            android:id="@+id/btn_perusahaan"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="200dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="30dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_usercompanylogo"
+            android:tint="#ffffff"
+            android:background="@drawable/roundedbutton"
+            android:onClick="masukPerusahaan"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Perusahaan"
+            android:textColor="#ffff"
+            android:layout_below="@id/btn_perusahaan"
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:layout_marginTop="-30dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/btn_pekerja"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="385dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="30dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_userworkerlogo"
+            android:tint="#ffffff"
+            android:background="@drawable/roundedbutton"
+            android:onClick="masukPekerja"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pekerja"
+            android:textColor="#ffff"
+            android:layout_below="@id/btn_pekerja"
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:layout_marginTop="-30dp"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

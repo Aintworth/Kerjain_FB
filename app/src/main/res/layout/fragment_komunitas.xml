@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="16dp">
+
+    <ImageView
+        android:id="@+id/cari"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:srcCompat="@drawable/ic_searchlogo"
+        android:tint="#dfdfdf"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="16dp"
+        />
+
+    <EditText
+        android:id="@+id/cari_komunitas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="  Cari Komunitas"
+        android:textSize="20sp"
+        android:singleLine="true"
+        android:inputType="text"
+        android:layout_marginTop="20dp"
+        android:ems="8"
+        android:layout_toRightOf="@id/cari"
+        />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_below="@id/cari_komunitas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:text="Komunitas Saya"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textstrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text"
+        android:textColor="#000000"
+        android:layout_marginLeft="16dp"
+        android:textSize="20dp"
+        android:text="-"/>
+
+    <TextView
+        android:layout_below="@id/textstrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:text="Anjuran Komunitas"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/fotokomunitas1"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/gsatu"
+                />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/namakomunitas1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="Perkumpulan Olah Hasil Alam"
+                android:textColor="#ffffff"
+                android:textSize="24sp" />
+
+            <view
+                android:id="@+id/garis1"
+                android:layout_width="85dp"
+                android:layout_height="3dp"
+                android:layout_below="@id/namakomunitas1"
+                android:layout_marginLeft="16dp"
+                android:backgroundTint="#ffffff" />
+
+            <TextView
+                android:id="@+id/jmlhkomunitas1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/garis1"
+                android:paddingLeft="16dp"
+                android:paddingTop="8dp"
+                android:text="21 / 30 Orang"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+
+
+            <ImageView
+                android:id="@+id/location1"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="18dp"
+                app:srcCompat="@drawable/ic_locationlogo"
+                android:layout_below="@id/jmlhkomunitas1"
+                android:tint="#ffffff"
+                />
+
+            <TextView
+                android:id="@+id/lokasikomunitas1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/location1"
+                android:layout_below="@id/jmlhkomunitas1"
+                android:layout_marginTop="18dp"
+                android:text="Jl Binjai KM.13"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+
+            <Button
+                android:layout_width="90dp"
+                android:layout_height="30dp"
+                android:background="@drawable/roundedbordergreen"
+                android:text="Gabung"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="230dp"
+                android:layout_marginTop="120dp"
+                />
+
+        </RelativeLayout>
+
+
+</RelativeLayout>

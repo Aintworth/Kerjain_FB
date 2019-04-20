@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bglogin"
+    tools:context=".Login">
+
+    <ImageView
+        android:layout_width="230dp"
+        android:layout_height="70dp"
+        android:src="@drawable/tulisankerjain"
+        android:scaleType="fitXY"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="32dp"
+        />
+
+    <EditText
+        android:id="@+id/nomorhandphone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Nomor HP"
+        android:textSize="25sp"
+        android:layout_marginTop="48dp"
+        android:layout_gravity="center_horizontal"
+        android:singleLine="true"
+        android:textColor="#ffffff"
+        android:inputType="numberSigned"
+        android:ems="8"
+        android:textAlignment="center"
+        />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textColor="#ffffff"
+        android:hint="@string/insert_password"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        android:singleLine="true"
+        android:textSize="25sp"
+        android:layout_gravity="center_horizontal"
+        android:ems="8"
+        />
+
+    <Button
+        android:id="@+id/masuk"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Masuk"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/roundedbutton"
+        android:layout_marginTop="32dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lupa kata sandi?"
+        android:textSize="18sp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#ffffff"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Belum daftar?"
+        android:textSize="18sp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#ffffff"
+        android:layout_marginTop="64dp"/>
+
+    <Button
+        android:id="@+id/daftar"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="Daftar"
+        android:textColor="#ffffff"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/roundedbutton"
+        />
+
+</LinearLayout>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:orientation="vertical"
+        tools:context=".PostPekerjaan">
+
+
+        <EditText
+            android:id="@+id/namapekerjaan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:ems="8"
+            android:hint="Nama Pekerjaan"
+            android:inputType="textCapSentences|textShortMessage"
+            android:singleLine="true"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Deskripsi Pekerjaan"
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id ="@+id/deskripsi"
+            android:layout_width ="match_parent"
+            android:layout_height ="wrap_content"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLines ="4"
+            android:maxLength ="2000"
+            />
+
+        <!--
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:lines="4"
+            android:maxLines="6" />
+            -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Lampirkan Foto (optional)"
+            android:textColor="@android:color/tertiary_text_dark"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="66dp"
+                android:layout_height="63dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/roundedborder" />
+
+            <ImageView
+                android:id="@+id/insertimage"
+                android:layout_width="54dp"
+                android:layout_height="52dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/insertimage" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Kategori Pekerjaan"
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
+
+        <Spinner
+            android:id="@+id/kategori"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@android:drawable/btn_dropdown"
+            android:dropDownWidth="wrap_content"
+            android:spinnerMode="dropdown" />
+
+        <EditText
+            android:id="@+id/lokasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:ems="8"
+            android:hint="Lokasi"
+            android:inputType="text|textPostalAddress"
+            android:singleLine="true"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/quantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:ems="8"
+            android:hint="Kebutuhan Orang"
+            android:inputType="numberSigned"
+            android:singleLine="true"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/upah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:ems="8"
+            android:hint="Upah Kerja (Rp)"
+            android:inputType="numberSigned"
+            android:singleLine="true"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Estimasi Waktu Pekerjaan"
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/border">
+
+            <EditText
+                android:id="@+id/txt_tglawal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoSizeMaxTextSize="4dp"
+                android:paddingBottom="8dp"
+                android:hint="Mulai dari"
+                android:inputType="datetime"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="16dp"
+                android:text="-"
+                android:textColor="@android:color/tertiary_text_dark"
+                android:textSize="28sp"/>
+
+            <EditText
+                android:id="@+id/txt_tglakhir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:paddingBottom="8dp"
+                android:autoSizeMaxTextSize="4dp"
+                android:hint="Sampai"
+                android:inputType="datetime"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/gambarinfo"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/info" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/gambarinfo"
+                android:text="Batas terakhir postingan pekerjaan ini adalah 2 minggu dimulai dari tanggal posting pekerjaan."
+                android:textColor="@android:color/tertiary_text_dark"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/masuk"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/roundedbuttonblue"
+            android:text="Post Pekerjaan"
+            android:textColor="#003B60" />
+
+
+    </LinearLayout>
+</ScrollView>

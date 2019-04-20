@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/fotoprofil"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/fotoprofilpekerja"/>
+
+    <TextView
+        android:id="@+id/tulisannama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_toRightOf="@id/fotoprofil"
+        android:text="Pardin Supardi"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tulisanstatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tulisannama"
+        android:layout_toRightOf="@id/fotoprofil"
+        android:text="Status"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tulisanstatus"
+        android:layout_toRightOf="@id/fotoprofil"
+        android:text="Dalam Proyek"
+        android:textColor="#34ABA1" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="32dp"
+        android:tint="#dfdfdf"
+        app:srcCompat="@drawable/ic_userworkerlogo" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_dalamproses"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="110dp"
+            android:background="@drawable/button_background"
+            android:text="Dalam Proses" />
+
+        <Button
+            android:id="@+id/dalamproses"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="110dp"
+            android:background="@android:color/transparent"
+            android:text="Selesai" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tulisanproyekpipa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="160dp"
+        android:text="Proyek Pengolahan Hasil Alam"
+        android:textColor="#003B60"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="100dp"
+        android:layout_height="2dp"
+        android:layout_below="@id/buatakun"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="185dp"
+        android:background="#34ABA1" />
+
+    <TextView
+        android:id="@+id/namapt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tulisanproyekpipa"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="8dp"
+        android:text="CV Manao Sumatera"
+        android:textColor="#003B60"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/dayempat"
+        android:layout_width="wrap_content"
+        android:layout_height="170dp"
+        android:layout_below="@id/namapt"
+        android:src="@drawable/dayempat" />
+
+    <TextView
+        android:id="@+id/tulisanbersama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dayempat"
+        android:layout_marginLeft="48dp"
+        android:text="Bersama"
+        android:textColor="#dfdfdf"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tulisanperkumpulan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tulisanbersama"
+        android:layout_marginLeft="48dp"
+        android:text="Perkumpulan Mekanik"
+        android:textColor="#34ABA1"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tulisanestimasi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tulisanperkumpulan"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="24dp"
+        android:text="Estimasi Selesai"
+        android:textColor="#dfdfdf"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="405dp"
+        android:layout_marginRight="48dp"
+        android:layout_toRightOf="@id/tulisanperkumpulan"
+        android:text="(      / 30)"
+        android:textColor="#dfdfdf"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tulisanjumlahorang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="405dp"
+        android:layout_marginRight="48dp"
+        android:layout_toRightOf="@id/tulisanperkumpulan"
+        android:text="  21"
+        android:textColor="#003B60"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/bataswaktu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tulisanestimasi"
+        android:layout_marginLeft="48dp"
+        android:text="30 - 45 Hari"
+        android:textColor="#34ABA1"
+        android:textSize="16dp" />
+
+
+</RelativeLayout>

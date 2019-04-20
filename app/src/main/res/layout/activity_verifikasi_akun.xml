@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    tools:context=".VerifikasiAkun">
+
+    <TextView
+        android:id="@+id/tulisan1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:text="Unggah foto Anda memegang"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tulisan1"
+        android:text="Kartu Identitas Anda"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="18sp"
+        android:id="@+id/tulisan2"/>
+
+    <ImageView
+        android:id="@+id/fotoverifikasi"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:src="@drawable/fotoverifikasi"
+        android:layout_below="@+id/tulisan2"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/tulisan3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/fotoverifikasi"
+        android:text="Pastikan Wajah Anda dan Kartu Identitas"
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="18sp"
+        />
+
+    <TextView
+        android:id="@+id/tulisan4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tulisan3"
+        android:text="Anda terlihat jelas dan masuk ke dalam"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="18sp"
+        />
+
+    <TextView
+        android:id="@+id/tulisan5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tulisan4"
+        android:text="area frame"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="18sp"
+        />
+
+    <Button
+        android:id="@+id/btn_unggah"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/tulisan5"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom|center"
+        android:layout_marginTop="58dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/roundedbuttonblue"
+        android:text="UNGGAH"
+        android:textColor="#003B60" />
+
+
+</RelativeLayout>
