@@ -36,7 +36,7 @@ public class VerifyActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
 
     private DatabaseReference mDatabase;
-    private String name, alamat, email, pos, ktp, provinsi, kotakabupaten, kecamatan, mobile;
+    private String name, alamat, email, pos, ktp, provinsi, kotakabupaten, kecamatan, mobile, func;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,14 +55,19 @@ public class VerifyActivity extends AppCompatActivity {
         //and sending the verification code to the number
         Intent intent = getIntent();
         mobile = intent.getStringExtra("mobile");
-        name = intent.getStringExtra("name");
-        email = intent.getStringExtra("email");
-        ktp = intent.getStringExtra("ktp");
-        pos = intent.getStringExtra("pos");
-        alamat = intent.getStringExtra("alamat");
-        provinsi = intent.getStringExtra("provinsi");
-        kotakabupaten = intent.getStringExtra("kotakabupaten");
-        kecamatan = intent.getStringExtra("kecamatan");
+        func = intent.getStringExtra("func");
+        if(func == "register")
+        {
+            name = intent.getStringExtra("name");
+            email = intent.getStringExtra("email");
+            ktp = intent.getStringExtra("ktp");
+            pos = intent.getStringExtra("pos");
+            alamat = intent.getStringExtra("alamat");
+            provinsi = intent.getStringExtra("provinsi");
+            kotakabupaten = intent.getStringExtra("kotakabupaten");
+            kecamatan = intent.getStringExtra("kecamatan");
+        }
+
         sendVerificationCode(mobile);
         //if the automatic sms detection did not work, user can also enter the code manually
         //so adding a click listener to the button
@@ -137,19 +142,23 @@ public class VerifyActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             final FirebaseUser user = mAuth.getInstance().getCurrentUser();
-                            DatabaseReference mRootRef = FirebaseDatabase.getInstance().getReference();
-                            DatabaseReference mConditionRef = mRootRef.child("users").child("pekerja").child(user.getUid());
-                            DatabaseReference mRegistered = mRootRef.child("registered").child("pekerja");
-                            mConditionRef.child("nama").setValue(name);
-                            mConditionRef.child("nomor_telepon").setValue(mobile);
-                            mConditionRef.child("email").setValue(email);
-                            mConditionRef.child("nomor_ktp").setValue(ktp);
-                            mConditionRef.child("kode_pos").setValue(pos);
-                            mConditionRef.child("alamat").setValue(alamat);
-                            mConditionRef.child("provinsi").setValue(provinsi);
-                            mConditionRef.child("kota/kabupaten").setValue(kotakabupaten);
-                            mConditionRef.child("kecamatan").setValue(kecamatan);
-                            mRegistered.child(mobile).setValue(mobile);
+                            if(func == "register")
+                            {
+                                DatabaseReference mRootRef = FirebaseDatabase.getInstance().getReference();
+                                DatabaseReference mConditionRef = mRootRef.child("users").child("pekerja").child(user.getUid());
+                                DatabaseReference mRegistered = mRootRef.child("registered").child("pekerja");
+                                mConditionRef.child("nama").setValue(name);
+                                mConditionRef.child("nomor_telepon").setValue(mobile);
+                                mConditionRef.child("email").setValue(email);
+                                mConditionRef.child("nomor_ktp").setValue(ktp);
+                                mConditionRef.child("kode_pos").setValue(pos);
+                                mConditionRef.child("alamat").setValue(alamat);
+                                mConditionRef.child("provinsi").setValue(provinsi);
+                                mConditionRef.child("kota/kabupaten").setValue(kotakabupaten);
+                                mConditionRef.child("kecamatan").setValue(kecamatan);
+                                mRegistered.child(mobile).setValue(mobile);
+                            }
+
                             //verification successful we will start the profile activity
                             Intent intent = new Intent(VerifyActivity.this, BottomNavigationView.class);
                             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);

@@ -18,7 +18,7 @@ public class BuatAkunPekerja extends AppCompatActivity {
     private RadioGroup rgGender;
     private Spinner provinsi, kotaKabupaten, kecamatan;
     private Button register;
-    private String gender, mobile, name, ktp, email, pos, alamat, provinsi1, kotaKabupaten1, kecamatan1;
+    private String gender, mobile, name, ktp, email, pos, alamat, provinsi1, kotaKabupaten1, kecamatan1, func;
 
     @Override
 
@@ -100,6 +100,7 @@ public class BuatAkunPekerja extends AppCompatActivity {
         intent.putExtra("ktp", ktp);
         intent.putExtra("email", email);
         intent.putExtra("pos", pos);
+        intent.putExtra("func", "register");
         startActivity(intent);
     }
 }

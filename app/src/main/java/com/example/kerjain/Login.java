@@ -5,18 +5,22 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
-public class Login extends AppCompatActivity implements View.OnClickListener {
+public class Login extends AppCompatActivity{
+    EditText nomorHp;
+    Button masuk;
+    String func;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
-        Button button1  = findViewById(R.id.masuk);
+        nomorHp = findViewById(R.id.nomorhandphone);
+        masuk = findViewById(R.id.masuk);
         Button button2  = findViewById(R.id.daftar);
 
-        button1.setOnClickListener(new View.OnClickListener() {
+        masuk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 userLogin();
@@ -29,26 +33,13 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                 userDaftar();
             }
         });
-
-        button1.setOnClickListener(this);
-        button2.setOnClickListener(this);
-    }
-
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.masuk:
-                userLogin();
-                break;
-            case R.id.daftar:
-                userDaftar();
-                break;
-        }
     }
 
     public void userLogin(){
-        Intent intent = new Intent(this, BottomNavigationView.class);
+        String mobile = nomorHp.getText().toString().trim();
+        Intent intent = new Intent(Login.this, VerifyActivity.class );
+        intent.putExtra("func", "login");
+        intent.putExtra("mobile", mobile);
         startActivity(intent);
     }
 
