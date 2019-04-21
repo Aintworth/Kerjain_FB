@@ -11,10 +11,11 @@ import android.widget.RadioButton;
 import android.widget.Spinner;
 
 public class BuatAkunPerusahaan extends AppCompatActivity {
-    EditText namaPerusahaan, emailPerusahaan, namaPenanggungjawab, nomorKtp, nomorTelepon, kodePos, nomorNpwp, nomorSiup;
-    Spinner provinsi, kotaKabupaten, kecamatan;
-    String namaPer, emailPer, namaPen, ktp, mobile, pos, npwp, siup, provinsi1, kotaKabupaten1, kecamatan1;
-    Button submit;
+    private EditText namaPerusahaan, emailPerusahaan, namaPenanggungjawab, nomorKtp, nomorTelepon, kodePos, nomorNpwp, nomorSiup;
+    private Spinner provinsi, kotaKabupaten, kecamatan;
+    private String namaPer, emailPer, namaPen, ktp, mobile, pos, npwp, siup, provinsi1, kotaKabupaten1, kecamatan1;
+    private Button submit;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +30,7 @@ public class BuatAkunPerusahaan extends AppCompatActivity {
         kodePos = findViewById(R.id.kodepos);
         nomorNpwp = findViewById(R.id.nomornpwp);
         nomorSiup = findViewById(R.id.nomorsiup);
+        submit = findViewById(R.id.masuk);
 
         provinsi = findViewById(R.id.provinsi);
         ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this, R.array.provinsi, android.R.layout.simple_spinner_item);
