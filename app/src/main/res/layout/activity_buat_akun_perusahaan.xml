@@ -163,7 +163,7 @@
             android:textSize="18sp" />
 
         <Spinner
-            android:id="@+id/provinsi"
+            android:id="@+id/provinsiPr"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -180,7 +180,7 @@
             android:textSize="18sp" />
 
         <Spinner
-            android:id="@+id/kotakabupaten"
+            android:id="@+id/kotakabupatenPr"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -197,7 +197,7 @@
             android:textSize="18sp" />
 
         <Spinner
-            android:id="@+id/kecamatan"
+            android:id="@+id/kecamatanPr"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"

@@ -44,7 +44,7 @@ public class VerifyActivity extends AppCompatActivity {
     private TextView reset;
 
     //Timer
-    private static final long START_TIME = 60000;
+    private long START_TIME = 60000;
     private TextView mTextViewCountDown;
     private CountDownTimer mCountDownTimer;
     private boolean mTimerRunning; //utk cek apakah timer sedang berjalan
@@ -77,7 +77,7 @@ public class VerifyActivity extends AppCompatActivity {
             startTimer();
         }
 
-        if(func == "registerPk")
+        if(func.equals("registerPk"))
         {
             name = intent.getStringExtra("name");
             email = intent.getStringExtra("email");
@@ -87,7 +87,7 @@ public class VerifyActivity extends AppCompatActivity {
             provinsi = intent.getStringExtra("provinsi");
             kotakabupaten = intent.getStringExtra("kotakabupaten");
             kecamatan = intent.getStringExtra("kecamatan");
-        }else if(func == "registerPr")
+        }else if(func.equals("registerPr"))
         {
             namaPen = intent.getStringExtra("namaPen");
             namaPer = intent.getStringExtra("namaPer");
@@ -99,6 +99,7 @@ public class VerifyActivity extends AppCompatActivity {
             npwp = intent.getStringExtra("npwp");
             siup = intent.getStringExtra("siup");
             pos = intent.getStringExtra("pos");
+            alamat = intent.getStringExtra("alamat");
         }
 
         sendVerificationCode(mobile);
@@ -174,10 +175,10 @@ public class VerifyActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
 
-                    if(func == "registerPk")
+                    if(func.equals("registerPk"))
                     {
                         registerPk();
-                    }else if(func == "registerPr")
+                    }else if(func.equals("registerPr"))
                     {
                         registerPr();
                     }
@@ -238,6 +239,7 @@ public class VerifyActivity extends AppCompatActivity {
         mConditionRef.child("nomor_ktp").setValue(ktp);
         mConditionRef.child("nomor_npwp").setValue(npwp);
         mConditionRef.child("nomor_siup").setValue(siup);
+        mConditionRef.child("alamat").setValue(alamat);
         mConditionRef.child("provinsi").setValue(provinsi);
         mConditionRef.child("kota_kabupaten").setValue(kotakabupaten);
         mConditionRef.child("kecamatan").setValue(kecamatan);
@@ -277,6 +279,8 @@ public class VerifyActivity extends AppCompatActivity {
         reset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                START_TIME = 60000;
+                mTimeLeft = START_TIME;
                 startTimer();
                 sendVerificationCode(mobile);
 

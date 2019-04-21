@@ -11,9 +11,9 @@ import android.widget.RadioButton;
 import android.widget.Spinner;
 
 public class BuatAkunPerusahaan extends AppCompatActivity {
-    private EditText namaPerusahaan, emailPerusahaan, namaPenanggungjawab, nomorKtp, nomorTelepon, kodePos, nomorNpwp, nomorSiup;
+    private EditText namaPerusahaan, emailPerusahaan, namaPenanggungjawab, nomorKtp, nomorTelepon, kodePos, nomorNpwp, nomorSiup, alamatLengkap;
     private Spinner provinsi, kotaKabupaten, kecamatan;
-    private String namaPer, emailPer, namaPen, ktp, mobile, pos, npwp, siup, provinsi1, kotaKabupaten1, kecamatan1;
+    private String namaPer, emailPer, namaPen, ktp, mobile, pos, npwp, siup, provinsi1, kotaKabupaten1, kecamatan1, alamat;
     private Button submit;
 
 
@@ -23,7 +23,7 @@ public class BuatAkunPerusahaan extends AppCompatActivity {
         setContentView(R.layout.activity_buat_akun_perusahaan);
 
         namaPerusahaan = findViewById(R.id.namaperusahaan);
-        emailPerusahaan = findViewById(R.id.emailpekerja);
+        emailPerusahaan = findViewById(R.id.emailperusahaan);
         namaPenanggungjawab = findViewById(R.id.namapenanggungjawab);
         nomorKtp = findViewById(R.id.nomorktp);
         nomorTelepon = findViewById(R.id.nomortelpon);
@@ -31,18 +31,19 @@ public class BuatAkunPerusahaan extends AppCompatActivity {
         nomorNpwp = findViewById(R.id.nomornpwp);
         nomorSiup = findViewById(R.id.nomorsiup);
         submit = findViewById(R.id.masuk);
+        alamatLengkap = findViewById(R.id.alamatlengkap);
 
-        provinsi = findViewById(R.id.provinsi);
+        provinsi = findViewById(R.id.provinsiPr);
         ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this, R.array.provinsi, android.R.layout.simple_spinner_item);
         adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         provinsi.setAdapter(adapter1);
 
-        kotaKabupaten = findViewById(R.id.kotakabupaten);
+        kotaKabupaten = findViewById(R.id.kotakabupatenPr);
         ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.kabupaten, android.R.layout.simple_spinner_item);
         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         kotaKabupaten.setAdapter(adapter2);
 
-        kecamatan = findViewById(R.id.kecamatan);
+        kecamatan = findViewById(R.id.kecamatanPr);
         ArrayAdapter<CharSequence> adapter3 = ArrayAdapter.createFromResource(this, R.array.kecamatan, android.R.layout.simple_spinner_item);
         adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         kecamatan.setAdapter(adapter3);
@@ -63,9 +64,9 @@ public class BuatAkunPerusahaan extends AppCompatActivity {
         ktp = nomorKtp.getText().toString().trim();
         npwp = nomorNpwp.getText().toString().trim();
         siup = nomorSiup.getText().toString().trim();
-        emailPer = emailPerusahaan.getText().toString().trim();
+        //emailPer = emailPerusahaan.getText().toString().trim();
         pos = kodePos.getText().toString().trim();
-        //alamat = alamatLengkap.getText().toString().trim();
+        alamat = alamatLengkap.getText().toString().trim();
         provinsi1 = provinsi.getSelectedItem().toString().trim();
         kotaKabupaten1 = kotaKabupaten.getSelectedItem().toString().trim();
         kecamatan1 = kecamatan.getSelectedItem().toString().trim();
@@ -77,7 +78,7 @@ public class BuatAkunPerusahaan extends AppCompatActivity {
         intent.putExtra("namaPer",namaPer);
         intent.putExtra("namaPen",namaPen);
         intent.putExtra("emailPer",emailPer);
-        //intent.putExtra("alamat", alamat);
+        intent.putExtra("alamat", alamat);
         intent.putExtra("provinsi", provinsi1);
         intent.putExtra("kotakabupaten", kotaKabupaten1);
         intent.putExtra("kecamatan", kecamatan1);
