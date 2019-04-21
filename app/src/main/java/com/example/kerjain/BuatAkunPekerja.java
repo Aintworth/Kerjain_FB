@@ -100,7 +100,7 @@ public class BuatAkunPekerja extends AppCompatActivity {
         intent.putExtra("ktp", ktp);
         intent.putExtra("email", email);
         intent.putExtra("pos", pos);
-        intent.putExtra("func", "register");
+        intent.putExtra("func", "registerPk");
         startActivity(intent);
     }
 }
