@@ -33,20 +33,6 @@ public class BuatAkunPerusahaan extends AppCompatActivity {
         submit = findViewById(R.id.masuk);
         alamatLengkap = findViewById(R.id.alamatlengkap);
 
-        provinsi = findViewById(R.id.provinsiPr);
-        ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this, R.array.provinsi, android.R.layout.simple_spinner_item);
-        adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        provinsi.setAdapter(adapter1);
-
-        kotaKabupaten = findViewById(R.id.kotakabupatenPr);
-        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.kabupaten, android.R.layout.simple_spinner_item);
-        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        kotaKabupaten.setAdapter(adapter2);
-
-        kecamatan = findViewById(R.id.kecamatanPr);
-        ArrayAdapter<CharSequence> adapter3 = ArrayAdapter.createFromResource(this, R.array.kecamatan, android.R.layout.simple_spinner_item);
-        adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        kecamatan.setAdapter(adapter3);
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override

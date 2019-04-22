@@ -7,6 +7,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,6 +29,10 @@ import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
 public class VerifyActivity extends AppCompatActivity {
+
+    private Button tombolSkip;
+
+
     //These are the objects needed
     //It is the verification id that will be sent to the user
     private String mVerificationId;
@@ -55,6 +60,14 @@ public class VerifyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_verify);
 
+        tombolSkip = findViewById(R.id.skip);
+        tombolSkip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                skipMasuk();
+            }
+        });
+
 
         //Init Timer
         mTextViewCountDown = findViewById(R.id.timer);
@@ -81,12 +94,7 @@ public class VerifyActivity extends AppCompatActivity {
         {
             name = intent.getStringExtra("name");
             email = intent.getStringExtra("email");
-            ktp = intent.getStringExtra("ktp");
-            pos = intent.getStringExtra("pos");
             alamat = intent.getStringExtra("alamat");
-            provinsi = intent.getStringExtra("provinsi");
-            kotakabupaten = intent.getStringExtra("kotakabupaten");
-            kecamatan = intent.getStringExtra("kecamatan");
         }else if(func.equals("registerPr"))
         {
             namaPen = intent.getStringExtra("namaPen");
@@ -217,14 +225,11 @@ public class VerifyActivity extends AppCompatActivity {
         DatabaseReference mConditionRef = mRootRef.child("users").child("pekerja").child(user.getUid());
         DatabaseReference mRegistered = mRootRef.child("registered").child("pekerja");
         mConditionRef.child("nama").setValue(name);
+        mConditionRef.child("status").setValue("Tidak Sedang Bekerja");
+        mConditionRef.child("join_grup").setValue("false");
         mConditionRef.child("nomor_telepon").setValue(mobile);
         mConditionRef.child("email").setValue(email);
-        mConditionRef.child("nomor_ktp").setValue(ktp);
-        mConditionRef.child("kode_pos").setValue(pos);
         mConditionRef.child("alamat").setValue(alamat);
-        mConditionRef.child("provinsi").setValue(provinsi);
-        mConditionRef.child("kota/kabupaten").setValue(kotakabupaten);
-        mConditionRef.child("kecamatan").setValue(kecamatan);
         mRegistered.child(mobile).setValue(mobile);
     }
     public void registerPr(){
@@ -286,6 +291,10 @@ public class VerifyActivity extends AppCompatActivity {
 
             }
         });
+    }
+    public void skipMasuk(){
+        Intent intent = new Intent(this, BottomNavigationView.class);
+        startActivity(intent);
     }
 
 }
