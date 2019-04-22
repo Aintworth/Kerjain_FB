@@ -241,14 +241,9 @@ public class VerifyActivity extends AppCompatActivity {
         mConditionRef.child("nomor_telepon").setValue(mobile);
         mConditionRef.child("email").setValue(emailPer);
         mConditionRef.child("nama_penanggungjawab").setValue(namaPen);
-        mConditionRef.child("nomor_ktp").setValue(ktp);
         mConditionRef.child("nomor_npwp").setValue(npwp);
         mConditionRef.child("nomor_siup").setValue(siup);
         mConditionRef.child("alamat").setValue(alamat);
-        mConditionRef.child("provinsi").setValue(provinsi);
-        mConditionRef.child("kota_kabupaten").setValue(kotakabupaten);
-        mConditionRef.child("kecamatan").setValue(kecamatan);
-        mConditionRef.child("kode_pos").setValue(pos);
         mRegistered.child(mobile).setValue(mobile);
     }
     private void startTimer(){

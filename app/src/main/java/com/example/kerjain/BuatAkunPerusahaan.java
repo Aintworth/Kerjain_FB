@@ -25,9 +25,7 @@ public class BuatAkunPerusahaan extends AppCompatActivity {
         namaPerusahaan = findViewById(R.id.namaperusahaan);
         emailPerusahaan = findViewById(R.id.emailperusahaan);
         namaPenanggungjawab = findViewById(R.id.namapenanggungjawab);
-        nomorKtp = findViewById(R.id.nomorktp);
         nomorTelepon = findViewById(R.id.nomortelpon);
-        kodePos = findViewById(R.id.kodepos);
         nomorNpwp = findViewById(R.id.nomornpwp);
         nomorSiup = findViewById(R.id.nomorsiup);
         submit = findViewById(R.id.masuk);
@@ -47,15 +45,10 @@ public class BuatAkunPerusahaan extends AppCompatActivity {
         mobile = nomorTelepon.getText().toString().trim();
         namaPer = namaPerusahaan.getText().toString().trim();
         namaPen = namaPenanggungjawab.getText().toString().trim();
-        ktp = nomorKtp.getText().toString().trim();
         npwp = nomorNpwp.getText().toString().trim();
         siup = nomorSiup.getText().toString().trim();
-        //emailPer = emailPerusahaan.getText().toString().trim();
-        pos = kodePos.getText().toString().trim();
+        emailPer = emailPerusahaan.getText().toString().trim();
         alamat = alamatLengkap.getText().toString().trim();
-        provinsi1 = provinsi.getSelectedItem().toString().trim();
-        kotaKabupaten1 = kotaKabupaten.getSelectedItem().toString().trim();
-        kecamatan1 = kecamatan.getSelectedItem().toString().trim();
     }
 
     public void submitData(){
@@ -65,14 +58,9 @@ public class BuatAkunPerusahaan extends AppCompatActivity {
         intent.putExtra("namaPen",namaPen);
         intent.putExtra("emailPer",emailPer);
         intent.putExtra("alamat", alamat);
-        intent.putExtra("provinsi", provinsi1);
-        intent.putExtra("kotakabupaten", kotaKabupaten1);
-        intent.putExtra("kecamatan", kecamatan1);
-        intent.putExtra("ktp", ktp);
         intent.putExtra("npwp", npwp);
         intent.putExtra("siup", siup);
         //intent.putExtra("email", email);
-        intent.putExtra("pos", pos);
         intent.putExtra("func", "registerPr");
         startActivity(intent);
     }
