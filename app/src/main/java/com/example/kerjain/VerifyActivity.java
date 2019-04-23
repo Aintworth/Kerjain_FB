@@ -1,6 +1,8 @@
 package com.example.kerjain;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.CountDownTimer;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -13,6 +15,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.TaskExecutors;
 import com.google.firebase.FirebaseException;
@@ -24,6 +28,10 @@ import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.OnProgressListener;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
@@ -47,6 +55,10 @@ public class VerifyActivity extends AppCompatActivity {
     private String name, alamat, email, pos, ktp, provinsi, kotakabupaten, kecamatan, mobile, func;
     private String namaPer, namaPen, emailPer, npwp, siup;
     private TextView reset;
+
+    private Uri filePath;
+    private FirebaseStorage storage;
+    private StorageReference storageReference;
 
     //Timer
     private long START_TIME = 60000;
@@ -86,6 +98,10 @@ public class VerifyActivity extends AppCompatActivity {
         mobile = intent.getStringExtra("mobile");
         func = intent.getStringExtra("func");
 
+        //declare storeage reference before using
+        storage = FirebaseStorage.getInstance();
+        storageReference = storage.getReference();
+
         if(mTimerRunning == false){
             startTimer();
         }
@@ -95,6 +111,8 @@ public class VerifyActivity extends AppCompatActivity {
             name = intent.getStringExtra("name");
             email = intent.getStringExtra("email");
             alamat = intent.getStringExtra("alamat");
+            filePath = Uri.parse(intent.getStringExtra("filePath"));
+            intent.putExtra("filePath", filePath.toString());
         }else if(func.equals("registerPr"))
         {
             namaPen = intent.getStringExtra("namaPen");
@@ -190,11 +208,12 @@ public class VerifyActivity extends AppCompatActivity {
                     {
                         registerPr();
                     }
-
+                    else
+                    {
+                        next();
+                    }
                     //verification successful we will start the profile activity
-                    Intent intent = new Intent(VerifyActivity.this, BottomNavigationView.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                    startActivity(intent);
+
 
                 } else {
 
@@ -231,6 +250,7 @@ public class VerifyActivity extends AppCompatActivity {
         mConditionRef.child("email").setValue(email);
         mConditionRef.child("alamat").setValue(alamat);
         mRegistered.child(mobile).setValue(mobile);
+        uploadImage();
     }
     public void registerPr(){
         final FirebaseUser user = mAuth.getInstance().getCurrentUser();
@@ -291,5 +311,48 @@ public class VerifyActivity extends AppCompatActivity {
         Intent intent = new Intent(this, BottomNavigationView.class);
         startActivity(intent);
     }
+    public void next(){
+        Intent intent = new Intent(VerifyActivity.this, BottomNavigationView.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+    }
+    private void uploadImage() {
+
+        if(filePath != null)
+        {
+            final FirebaseUser user = mAuth.getInstance().getCurrentUser();
+            final ProgressDialog progressDialog = new ProgressDialog(this);
+            progressDialog.setTitle("Uploading...");
+            progressDialog.show();
+
+            StorageReference ref;
+            ref = storageReference.child("images").child("pekerja").child(user.getUid());
+            ref.putFile(filePath)
+                    .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                            progressDialog.dismiss();
+                            Toast.makeText(VerifyActivity.this, "Uploaded", Toast.LENGTH_SHORT).show();
+                            next();
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            progressDialog.dismiss();
+                            Toast.makeText(VerifyActivity.this, "Failed "+e.getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    })
+                    .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
+                            double progress = (100.0*taskSnapshot.getBytesTransferred()/taskSnapshot
+                                    .getTotalByteCount());
+
+                        }
+                    });
+        }
+    }
+
 
 }
